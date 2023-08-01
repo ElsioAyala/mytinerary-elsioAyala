@@ -1,5 +1,13 @@
+*{
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-color: #4F46E5;
+  --body-bg: #EBEBEB ;
+  --text-color: #53575A;
+  --title-color: #1C1C1C;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -15,12 +23,12 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #4F46E5;
 }
 
 body {
@@ -29,6 +37,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: #1C1C1C;
+  background-color: var(--body-bg);
 }
 
 h1 {
@@ -55,15 +65,8 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.l-container {
+  max-width: 1291px;
+  margin-left: auto;
+  margin-right: auto;
 }
