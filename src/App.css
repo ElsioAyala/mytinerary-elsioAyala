@@ -33,11 +33,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*temporal*/
+  /*margin-top: auto;
+  margin-bottom: auto;*/
 }
 
 .hero{
   max-width: 50%;
-  margin-top: 60px;
+  /*temp*/
+  /*margin-top: 500px;*/
+  margin-bottom: 50px;
 
 }
 
@@ -62,4 +67,15 @@
 
 .hero-img img{
   width: 300px;
+}
+
+.footer {
+  height: 180px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: start;
+  align-items: end;
 }

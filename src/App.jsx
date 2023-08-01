@@ -35,7 +35,9 @@ function App() {
         </div>
       </main>
       <footer className="footer">
-
+        <div className="l-container">
+          <p className="">My Tinerary</p>
+        </div>
       </footer>
     </>
   )
