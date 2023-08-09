@@ -14,6 +14,7 @@ export default function Cities() {
                 isCenter={true}
                 childComponent={<SearchCity/>}>
             </Hero>
+            <SearchCity/>
         </main>
         
     )

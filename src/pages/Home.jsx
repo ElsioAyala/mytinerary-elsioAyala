@@ -16,7 +16,10 @@ export default function Home() {
             <div>
               <Button 
                 text="View More" 
-                customStyle="w-40 lg:w-48 lg:font-bold lg:text-2xl flex justify-center"/>
+                customStyle="w-40 lg:w-48 lg:font-bold lg:text-2xl flex justify-center"
+                padding="py-[0.6em] px-[1.2em]"
+                link={"cities"}
+                />
             </div>
         </Hero>
         <PopularMytinerari/>

@@ -1,7 +1,7 @@
 
-export default function Hero({children, title, text, styleTitle, styleText, isCenter, imgBackground, height, childComponent}) {
+export default function Hero({children, title, text, styleTitle, styleText, isCenter, imgBackground, height}) {
   return (
-    <section className="relative  h-screen w-full overflow-hidden  snap-start min-h-[550px]">
+    <section className={`relative  w-full overflow-hidden    ${height == "h-full" ? " h-screen min-h-[550px] snap-start" : null}`}>
         <div className={`${height} z-10 relative w-full flex items-center  ${height != "h-full" ? "min-h-[250px] lg:min-h-[300px] h-small": "min-h-[550px]" }`}>
             <div className="w-full px-3 sm:px-5 lg:px-10 2xl:px-0 z-10"> 
                 <div className={`flex items-center max-w-7xl w-full mx-auto ${isCenter ? "w-full" : null}`}>
@@ -16,14 +16,7 @@ export default function Hero({children, title, text, styleTitle, styleText, isCe
             <div className="absolute top-0 bottom-0 h-full w-full">
                 <img src={`${imgBackground}`} alt="background" className="h-full w-full object-cover brightness-50"/>
             </div>
-
-            
         </div>
-
-        {height != "h-full" ? 
-            childComponent
-        : null } 
-        
     </section>
   )
 }

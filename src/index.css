@@ -29,12 +29,13 @@ a {
 
 body {
   margin: 0;
-  display: flex;
+  /*display: flex;*/
   place-items: center;
   min-width: 320px;
   color: #1C1C1C;
   background-color: #EBEBEB;
   position: relative;
+  min-height: 100vh;
   
 }
 
@@ -44,10 +45,10 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+.button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  /*padding: 0.6em 1.2em;*/
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -69,5 +70,14 @@ html{
 @media (max-height: 700px) {
   .grid-temp{
     grid-template-rows: repeat(2, minmax(100px, auto));
+  }
+}
+
+@media (min-width: 640px) {
+  .searchGrid{
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   }
 }

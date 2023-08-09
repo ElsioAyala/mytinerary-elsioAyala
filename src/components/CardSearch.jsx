@@ -1,11 +1,11 @@
 import Button from "./Button";
 
-export default function CardSearch() {
+export default function CardSearch({city, country, image, id}) {
     return (
-        <div className="relative w-full rounded-lg overflow-hidden">
-            <div className="relative z-10 flex justify-between text-white">
-                <div className="mx-3 my-5">
-                    <h3 className="text-2xl">Wakatovi</h3>
+        <div className="relative w-full rounded-lg overflow-hidden mb-6 sm:m-0">
+            <div className="relative z-10 flex justify-between text-white sm:flex-col sm:h-full">
+                <div className="mx-3 my-4">
+                    <h3 className="text-2xl">{city}</h3>
                     <div className="flex">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
@@ -14,19 +14,21 @@ export default function CardSearch() {
                             </svg>
 
                         </span>
-                        <p className="">Indonecia</p>
+                        <p className="">{country}</p>
                     </div>
                 </div>
-                <div className="my-auto mr-3">
+                <div className="my-auto mx-3 sm:mb-4">
                     <Button 
                     text="View More"
-                    customStyle="text-sm lg:text-2xl lg:font-bold"
+                    customStyle="text-sm lg:text-base lg:font-bold"
+                    padding="py-[0.6em] px-[1.2em]"
+                    link={id}
                     />
                 </div>
             </div>
 
 
-            <img src="/amsterdam.jpeg" alt="tokio" className="object-cover w-full h-full absolute top-0 bottom-0 brightness-75" />
+            <img src={image} alt="tokio" className="object-cover w-full h-full absolute top-0 bottom-0 brightness-50 sm:brightness-75" />
         </div>
     )
 }
