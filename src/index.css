@@ -33,7 +33,7 @@ body {
   place-items: center;
   min-width: 320px;
   color: #1C1C1C;
-  background-color: var(--body-bg);
+  background-color: #EBEBEB;
   position: relative;
   
 }
@@ -63,6 +63,11 @@ html{
 .grid-temp{
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(100px, 1fr));
   gap: 20px;
+}
+@media (max-height: 700px) {
+  .grid-temp{
+    grid-template-rows: repeat(2, minmax(100px, auto));
+  }
 }

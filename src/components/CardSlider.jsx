@@ -1,7 +1,7 @@
 
 function CardSlider({city, country, image}) {
   return (
-    <div className="w-40 sm:w-52 min-h-[200px] lg:w-72 max-h-96 relative rounded-md overflow-hidden">
+    <div className="w-40 sm:w-52 lg:w-72 max-h-96 relative rounded-md overflow-hidden">
         <a href="#" className="">
             <img src={`${image}`} alt="tokio" className="object-cover w-full h-full"/>
             <div className="absolute bottom-0 z-40 w-full [&>p]:text-center [&>p]:font-normal text-white bg-black bg-opacity-60 py-2">

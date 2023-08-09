@@ -8,9 +8,10 @@ export default function Home() {
         <Hero 
             title="Find the perfect destination" 
             text="Our app will help you find the perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has never been easier." 
-            colorTitle="text-white"
-            colorText="text-gray-400"
+            styleTitle="text-white lg:text-5xl"
+            styleText="text-gray-400"
             imgBackground="/pareja-viaje-globos.jpg"
+            height="h-full"
             isCenter={false}>
             <div>
               <Button 
