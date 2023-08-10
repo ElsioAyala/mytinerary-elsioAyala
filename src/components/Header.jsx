@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Button from "./Button"
-import Nav from "./Nav"
+import NavMain from "./NavMain"
 import UserMenu from "./UserMenu"
 
 function Header() {
@@ -24,7 +24,7 @@ function Header() {
                     </button>
                 </div>
                 <div className="mainNavBar order-2 lg:order-1 lg:flex lg:flex-grow lg:justify-end">
-                    <Nav traslate={menu ? "translate-x-0" : "-translate-x-full lg:translate-x-0"} />
+                    <NavMain traslate={menu ? "translate-x-0" : "-translate-x-full lg:translate-x-0"} />
                 </div>
                 <div className="lg:ml-5 order-4 lg:order-1 flex flex-grow basis-0 lg:basis-auto justify-end lg:flex-grow-0 [$>button]:px-10">
                     {loged ? <UserMenu addLogout={addLogout} /> :
@@ -33,7 +33,7 @@ function Header() {
                             text="Login"
                             customStyle="text-sm lg:text-2xl lg:font-bold"
                             icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4 lg:w-6 lg:h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>}
-                            padding="px-2 py-1 lg:px-3"
+                            padding="px-2 py-[5px] lg:px-3"
                         />
                     </span>}
                 </div>

@@ -11,7 +11,7 @@ const data = [
     { city: "Buenos Aires", country: "Argentina", image: "/buenos-aires.jpeg" },
     { city: "Amsterdam", country: "Netherlands", image: "/amsterdam.jpeg" },
     { city: "London", country: "United Kingdom", image: "/londres.png" },
-    { city: "dubai", country: "United Arab Emirates", image: "/dubai.jpeg" },
+    { city: "Dubai", country: "United Arab Emirates", image: "/dubai.jpeg" },
     { city: "Rome", country: "Itali", image: "/roma.jpeg" },
     { city: "Rio de Janeiro", country: "Brasil", image: "/rio.jpeg" }
 ]
