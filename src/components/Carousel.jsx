@@ -2,18 +2,18 @@ import { useState, useEffect } from "react"
 import ViewSlider from "./ViewSlider"
 
 const data = [
-    { city: "Tokio", country: "Japan", image: "/tokio.jpeg" },
-    { city: "New York", country: "USA", image: "/new-york.jpg" },
-    { city: "Paris", country: "France", image: "/paris.jpg" },
-    { city: "Seoul", country: "South Korea", image: "/seoul.jpg" },
-    { city: "Madrid", country: "Spain", image: "/madrid.jpg" },
-    { city: "Bangkok", country: "Thailand", image: "/bangkok.jpeg" },
-    { city: "Buenos Aires", country: "Argentina", image: "/buenos-aires.jpeg" },
-    { city: "Amsterdam", country: "Netherlands", image: "/amsterdam.jpeg" },
-    { city: "London", country: "United Kingdom", image: "/londres.png" },
-    { city: "Dubai", country: "United Arab Emirates", image: "/dubai.jpeg" },
-    { city: "Rome", country: "Itali", image: "/roma.jpeg" },
-    { city: "Rio de Janeiro", country: "Brasil", image: "/rio.jpeg" }
+    { city: "Tokio", country: "Japan", image: "/assets/images/tokio.jpeg" },
+    { city: "New York", country: "USA", image: "/assets/images/new-york.jpg" },
+    { city: "Paris", country: "France", image: "/assets/images/paris.jpg" },
+    { city: "Seoul", country: "South Korea", image: "/assets/images/seoul.jpg" },
+    { city: "Madrid", country: "Spain", image: "/assets/images/madrid.jpg" },
+    { city: "Bangkok", country: "Thailand", image: "/assets/images/bangkok.jpeg" },
+    { city: "Buenos Aires", country: "Argentina", image: "/assets/images/buenos-aires.jpeg" },
+    { city: "Amsterdam", country: "Netherlands", image: "/assets/images/amsterdam.jpeg" },
+    { city: "London", country: "United Kingdom", image: "/assets/images/londres.png" },
+    { city: "Dubai", country: "United Arab Emirates", image: "/assets/images/dubai.jpeg" },
+    { city: "Rome", country: "Itali", image: "/assets/images/roma.jpeg" },
+    { city: "Rio de Janeiro", country: "Brasil", image: "/assets/images/rio.jpeg" }
 ]
 
 let arrComp = [];

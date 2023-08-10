@@ -10,7 +10,7 @@ export default function PopularMytinerari() {
             <Carousel/>
         </div>
         <div className="absolute top-0 bottom-0 h-full w-full z-10">
-            <img src="/avion.jpg" alt="avion despegando" className="h-full w-full object-cover brightness-50"/>
+            <img src="/assets/images/avion.jpg" alt="avion despegando" className="h-full w-full object-cover brightness-50"/>
         </div>
     </section>
   )

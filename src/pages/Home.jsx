@@ -10,7 +10,7 @@ export default function Home() {
             text="Our app will help you find the perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has never been easier." 
             styleTitle="text-white lg:text-5xl"
             styleText="text-gray-400"
-            imgBackground="/pareja-viaje-globos.jpg"
+            imgBackground="/assets/images/pareja-viaje-globos.jpg"
             height="h-full"
             isCenter={false}>
             <div>

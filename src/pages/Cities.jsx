@@ -9,7 +9,7 @@ export default function Cities() {
                 text="Collection of the most beautiful places and experience" 
                 styleTitle="text-white"
                 styleText="text-gray-400"
-                imgBackground="/cities.jpg"
+                imgBackground="/assets/images/cities.jpg"
                 height="h-1/4"
                 isCenter={true}
                 childComponent={<SearchCity/>}>

@@ -28,7 +28,7 @@ export default function CardSearch({city, country, image, id}) {
             </div>
 
 
-            <img src={image} alt="tokio" className="object-cover w-full h-full absolute top-0 bottom-0 brightness-50 sm:brightness-75" />
+            <img src={image} alt="image" className="object-cover w-full h-full absolute top-0 bottom-0 brightness-50 sm:brightness-75" />
         </div>
     )
 }
