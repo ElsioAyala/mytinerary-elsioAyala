@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 600;
 
@@ -19,6 +18,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 a {
   font-weight: 700;
   text-decoration: none;
@@ -26,19 +29,16 @@ a {
   font-style: normal;
 }
 
-
 body {
   margin: 0;
   /*display: flex;*/
   place-items: center;
   min-width: 320px;
-  color: #1C1C1C;
-  background-color: #EBEBEB;
+  color: #1c1c1c;
+  background-color: #ebebeb;
   position: relative;
   min-height: 100vh;
-  
 }
-
 
 h1 {
   font-size: 3.2em;
@@ -56,25 +56,25 @@ h1 {
   transition: border-color 0.25s;
 }
 
-html{
+html {
   scroll-snap-type: y mandatory;
   height: 100vh;
 }
 
-.grid-temp{
+.grid-temp {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: repeat(2, minmax(100px, 1fr));
   gap: 20px;
 }
 @media (max-height: 700px) {
-  .grid-temp{
+  .grid-temp {
     grid-template-rows: repeat(2, minmax(100px, auto));
   }
 }
 
 @media (min-width: 640px) {
-  .searchGrid{
+  .searchGrid {
     display: grid;
     gap: 20px;
     grid-auto-rows: 22rem;
