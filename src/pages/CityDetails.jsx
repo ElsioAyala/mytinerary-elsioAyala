@@ -19,7 +19,7 @@ export default function CityDetails() {
   }, [id]);
 
   return (
-    <main className="scroll-smooth">
+    <main>
       <Hero title={city.city} text={city.description} styleTitle="text-white lg:text-5xl" styleText="text-gray-100" imgBackground={city.image} height="h-full" isCenter={true}>
         <div className="flex flex-col sm:flex-row">
           <Button text="⬅ Back to Cities" customStyle="w-40  lg:font-bold lg:text-xl xl:text-2xl flex justify-center mr-10 w-60 sm:w-auto bg-gray-500 mb-5 sm:mb-0" padding="py-[0.4em] px-[1.5em]" link={"/cities"} />

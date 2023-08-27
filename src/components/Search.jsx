@@ -24,7 +24,6 @@ export default function Search({ allCities }) {
     setIsActivateVoice(true);
     let recognition = new webkitSpeechRecognition();
     recognition.lang = "en-US";
-
     recognition.onresult = (event) => {
       setIsActivateVoice(false);
       const resultText = event.results[event.results.length - 1][0].transcript;
@@ -32,11 +31,9 @@ export default function Search({ allCities }) {
       setSearch(text);
       getCitiesSearch(text);
     };
-
     recognition.onerror = () => {
       setIsActivateVoice(false);
     };
-
     recognition.start();
   };
 
@@ -69,14 +66,12 @@ export default function Search({ allCities }) {
         </div>
         <input
           type="text"
-          /*value={search}*/
           value={search}
           onChange={(event) => {
             setSearch(event.target.value);
           }}
           onKeyUp={(e) => {
             e.preventDefault();
-            console.log(search);
             if (search === "") {
               getCitiesSearch();
             }
@@ -85,13 +80,13 @@ export default function Search({ allCities }) {
           className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-indigo-500 block w-full pl-10 p-2.5  "
           placeholder="Search your city..."
         />
-        {isSuportSpeech ? (
+        {isSuportSpeech && (
           <button onClick={activateVoice} type="button" className="flex absolute inset-y-0 right-0 items-center pr-3">
             <svg className={`w-4 h-4 text-gray-500  hover:text-gray-900 transition-all duration-500 ${isActivateVoice ? "text-red-700 bg-[#ffe0e0] p-1 h-7 w-7 rounded-full" : "text-gray-500"}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd"></path>
             </svg>
           </button>
-        ) : null}
+        )}
       </div>
     </form>
   );

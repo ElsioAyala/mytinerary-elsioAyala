@@ -26,12 +26,12 @@ export default function GridCities() {
       <div className="max-w-7xl w-full mx-auto px-3 sm:px-5 lg:px-10 2xl:px-0 pb-24">
         <Search allCities={allCities} />
         <div>
-          {cities.length == 0 ? (
+          {cities.length == 0 && (
             <div className="flex items-start justify-center">
               <img src="/assets/images/search-cross.png" className="w-6 mr-3" />
               <p>No results found</p>
             </div>
-          ) : null}
+          )}
           <div className="searchGrid">
             {cities.map((city, key) => (
               <CardSearch key={key} city={city.city} country={city.country} image={city.image} id={city._id} />
