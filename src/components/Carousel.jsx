@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ViewSlider from "./ViewSlider";
 
 const data = [
-  { city: "Tokio", country: "Japan", image: "/assets/images/tokio.jpeg" },
+  { city: "Tokio", country: "Japan", image: "/assets/images/tokio.jpg" },
   { city: "New York", country: "USA", image: "/assets/images/new-york.jpg" },
   { city: "Paris", country: "France", image: "/assets/images/paris.jpg" },
   { city: "Seoul", country: "South Korea", image: "/assets/images/seoul.jpg" },
@@ -10,33 +10,33 @@ const data = [
   {
     city: "Bangkok",
     country: "Thailand",
-    image: "/assets/images/bangkok.jpeg",
+    image: "/assets/images/bangkok.jpg",
   },
   {
     city: "Buenos Aires",
     country: "Argentina",
-    image: "/assets/images/buenos-aires.jpeg",
+    image: "/assets/images/buenos-aires.jpg",
   },
   {
     city: "Amsterdam",
     country: "Netherlands",
-    image: "/assets/images/amsterdam.jpeg",
+    image: "/assets/images/amsterdam.jpg",
   },
   {
     city: "London",
     country: "United Kingdom",
-    image: "/assets/images/londres.png",
+    image: "/assets/images/londres.jpg",
   },
   {
     city: "Dubai",
     country: "United Arab Emirates",
-    image: "/assets/images/dubai.jpeg",
+    image: "/assets/images/dubai.jpg",
   },
-  { city: "Rome", country: "Itali", image: "/assets/images/roma.jpeg" },
+  { city: "Rome", country: "Itali", image: "/assets/images/roma.jpg" },
   {
     city: "Rio de Janeiro",
     country: "Brasil",
-    image: "/assets/images/rio.jpeg",
+    image: "/assets/images/rio.jpg",
   },
 ];
 

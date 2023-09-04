@@ -1,22 +1,34 @@
 import { useParams } from "react-router-dom";
 import Hero from "../components/Hero";
-import { useState, useEffect } from "react";
-import { getCityById } from "../services/cityQueries";
+import { useEffect } from "react";
 import { HashLink as Anchor } from "react-router-hash-link";
-import Itineraries from "../components/itineraries";
+
 import Button from "../components/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { getCity } from "../redux/citySlice";
+import NoItineraries from "../components/NoItineraries";
+import Itinerary from "../components/Itinerary";
 
 export default function CityDetails() {
   let { id } = useParams();
 
-  const [city, setCity] = useState([]);
+  /*const [city, setCity] = useState([]);*/
+
+  const { city, isLoading } = useSelector((state) => state.city);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getCityById(id)
-      .then((data) => setCity(data))
-      .catch((err) => console.log(err));
+    dispatch(getCity(id));
     window.scrollTo({ top: 0 });
-  }, [id]);
+  }, [dispatch, id]);
+
+  if (isLoading) {
+    return (
+      <div className="mx-auto mt-40 w-12">
+        <span className="loader"></span>
+      </div>
+    );
+  }
 
   return (
     <main>
@@ -28,7 +40,12 @@ export default function CityDetails() {
           </Anchor>
         </div>
       </Hero>
-      <Itineraries />
+      <section id="itineraries" className="relative scroll-smooth min-h-screen flex flex-col mx-2 ">
+        <h2 className="text-center my-9 text-3xl">Itineraries</h2>
+        <div className="last:mb-10">{city._itineraries !== undefined && city._itineraries.map((itinerary, key) => <Itinerary key={key} title={itinerary.title} image={itinerary.image} name={itinerary.nameUser} photo={itinerary.photoUser} price={itinerary.price} duration={itinerary.duration} likes={itinerary.likes} hashtags={itinerary.hashtags} />)}</div>
+
+        {city._itineraries !== undefined && city._itineraries.length == 0 ? <NoItineraries /> : null}
+      </section>
     </main>
   );
 }

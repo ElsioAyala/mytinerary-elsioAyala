@@ -1,6 +1,6 @@
-export default function Hero({ children, title, text, styleTitle, styleText, isCenter, imgBackground, height }) {
+export default function Hero({ children, title, text, styleTitle, styleText, isCenter, imgBackground, height, page }) {
   return (
-    <section className={`relative  w-full overflow-hidden    ${height == "h-full" ? " h-screen min-h-[550px] snap-start" : null}`}>
+    <section className={`relative ${page == "home" ? "snap-start" : ""}  w-full overflow-hidden    ${height == "h-full" ? " h-screen min-h-[550px] " : null}`}>
       <div className={`${height} z-10 relative w-full flex items-center  ${height != "h-full" ? "min-h-[250px] lg:min-h-[300px] h-small" : "min-h-[550px]"}`}>
         <div className="w-full px-3 sm:px-5 lg:px-10 2xl:px-0 z-10">
           <div className={`flex items-center max-w-7xl w-full mx-auto ${isCenter ? "w-full" : null}`}>
@@ -13,7 +13,10 @@ export default function Hero({ children, title, text, styleTitle, styleText, isC
         </div>
 
         <div className="absolute top-0 bottom-0 h-full w-full">
-          <img src={`${imgBackground}`} alt="background" className="h-full w-full object-cover brightness-50" />
+          <picture>
+            <source srcSet={imgBackground !== undefined ? `${imgBackground.slice(0, -3)}avif` : undefined} type="image/avif" className="h-full w-full object-cover brightness-50" />
+            <img src={`${imgBackground}`} alt="image background" className="h-full w-full object-cover brightness-50" />
+          </picture>
         </div>
       </div>
     </section>

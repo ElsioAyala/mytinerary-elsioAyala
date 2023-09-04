@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { getCities } from "../services/cityQueries";
 import { useDispatch } from "react-redux";
-import { setCities } from "../redux/citySlice";
+import { searchCities } from "../redux/citySlice";
+import { getAllCities } from "../redux/citySlice";
 
-export default function Search({ allCities }) {
+export default function Search() {
   const [isSuportSpeech, setIsSuportSpeech] = useState(false);
   const [isActivateVoice, setIsActivateVoice] = useState(false);
   const [search, setSearch] = useState("");
@@ -41,15 +41,9 @@ export default function Search({ allCities }) {
     let textSearch = text === undefined ? search : text;
     if (textSearch) {
       const queryParams = "?name=" + textSearch;
-      getCities(queryParams)
-        .then((data) => {
-          if (data !== undefined) {
-            dispatch(setCities(data));
-          }
-        })
-        .catch((err) => console.log(err));
+      dispatch(searchCities(queryParams));
     } else {
-      dispatch(setCities(allCities));
+      dispatch(getAllCities());
     }
   };
 

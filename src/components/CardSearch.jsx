@@ -20,8 +20,10 @@ export default function CardSearch({ city, country, image, id }) {
           <Button text="View More" customStyle="text-sm lg:text-base lg:font-bold" padding="py-[0.4em] px-[1.2em]" link={id} />
         </div>
       </div>
-
-      <img src={image} alt="image" className="object-cover w-full h-full absolute top-0 bottom-0 brightness-50 sm:brightness-75" />
+      <picture>
+        <source srcSet={`${image.slice(0, -3)}avif`} type="image/avif" className="object-cover w-full h-full absolute top-0 bottom-0 brightness-50 sm:brightness-75" />
+        <img src={image} alt={`image ${city}`} className="object-cover w-full h-full absolute top-0 bottom-0 brightness-50 sm:brightness-75" />
+      </picture>
     </div>
   );
 }
