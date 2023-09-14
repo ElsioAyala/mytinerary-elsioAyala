@@ -17,7 +17,7 @@ export default function UserMenu() {
     <div className="flex items-center relative">
       <div className="lg:text-2xl font-bold lg:flex lg:items-center" onMouseEnter={() => setTogglerMenuUser(!toggleMenuUser)} onClick={() => setTogglerMenuUser(!toggleMenuUser)}>
         <span className="hidden lg:inline-block">{user.name}</span>
-        <img src={user.photo} onError={(e) => (e.target.src = "assets/images/avatar.png")} className="w-8 lg:w-10 rounded-full inline-block lg:ml-5 hover:ring-4 user cursor-pointer ring-indigo-700/30" />
+        <img src={user.photo} onError={(e) => (e.target.src = "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-Pic.png")} className="w-8 lg:w-10 rounded-full inline-block lg:ml-5 hover:ring-4 user cursor-pointer ring-indigo-700/30" />
       </div>
       <ul onMouseLeave={() => setTogglerMenuUser(false)} className={`${toggleMenuUser ? "inline-block" : "hidden"} absolute top-10 right-0 lg:top-12 lg:right-3 bg-slate-500 w-48 rounded-md shadow overflow-hidden`}>
         <li className="px-3 py-3 text-sm lg:text-base font-medium flex items-center space-x-2 hover:bg-slate-400 cursor-pointer">

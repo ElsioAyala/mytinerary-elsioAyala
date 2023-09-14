@@ -1,16 +1,36 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { like } from "../services/itineraryQueries";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
-export default function Itinerary({ title, image, likes, photo, name, hashtags, duration, price }) {
+export default function Itinerary({ id, title, image, likes, photo, name, hashtags, duration, price }) {
+  const { user, isLogin } = useSelector((state) => state.user);
   const [show, setShow] = useState(false);
   const [isLike, setIsLike] = useState(false);
-  const [like, setLike] = useState(likes);
+  const [counterLike, setCounterLike] = useState(0);
 
-  const handleClick = () => {
-    if (isLike == false) setLike(like + 1);
-    else setLike(like - 1);
-    setIsLike(!isLike);
+  const handleClick = async () => {
+    if (isLogin) {
+      if (isLike == false) setCounterLike(counterLike + 1);
+      else setCounterLike(counterLike - 1);
+      setIsLike(!isLike);
+    }
+
+    await like({ itinerary_id: id });
   };
+
+  useEffect(() => {
+    setCounterLike(likes.length);
+
+    let userLike = likes.filter((like) => {
+      return like.includes(user.id);
+    });
+
+    if (userLike.length > 0) {
+      setIsLike(!isLike);
+    }
+  }, []);
 
   const arrayHashtags = hashtags.split(" ");
   const tooltip = isLike ? "Unilike" : "Like";
@@ -42,7 +62,7 @@ export default function Itinerary({ title, image, likes, photo, name, hashtags, 
               <svg xmlns="http://www.w3.org/2000/svg" fill={`${isLike ? "#EF4444" : "none"} `} viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7 group-hover:bg-[#ffe0e0] rounded-full transition-colors p-1">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
               </svg>
-              <span className="transition-all duration-300 mx-2">{like}</span>
+              <span className="transition-all duration-300 mx-2">{counterLike}</span>
             </motion.button>
           </div>
           <div

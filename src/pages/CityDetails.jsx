@@ -42,7 +42,7 @@ export default function CityDetails() {
       </Hero>
       <section id="itineraries" className="relative scroll-smooth min-h-screen flex flex-col mx-2 ">
         <h2 className="text-center my-9 text-3xl">Itineraries</h2>
-        <div className="last:mb-10">{city._itineraries !== undefined && city._itineraries.map((itinerary, key) => <Itinerary key={key} title={itinerary.title} image={itinerary.image} name={itinerary.nameUser} photo={itinerary.photoUser} price={itinerary.price} duration={itinerary.duration} likes={itinerary.likes} hashtags={itinerary.hashtags} />)}</div>
+        <div className="last:mb-10">{city._itineraries !== undefined && city._itineraries.map((itinerary, key) => <Itinerary key={key} id={itinerary._id} title={itinerary.title} image={itinerary.image} name={itinerary.nameUser} photo={itinerary.photoUser} price={itinerary.price} duration={itinerary.duration} likes={itinerary.likes} hashtags={itinerary.hashtags} />)}</div>
 
         {city._itineraries !== undefined && city._itineraries.length == 0 ? <NoItineraries /> : null}
       </section>
