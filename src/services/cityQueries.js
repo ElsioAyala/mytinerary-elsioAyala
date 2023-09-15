@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/api/",
+  baseURL: "https://mytinerary-back-ayalaelsio-dh0q-dev.fl0.io/",
 });
 
 export const getCities = async (queryParam = "") => {
