@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "sonner";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/api/users/",
+  baseURL: "https://mytinerary-back-ayalaelsio-dh0q-dev.fl0.io/api/users/",
 });
 
 /*export const signup = async (input) => {
